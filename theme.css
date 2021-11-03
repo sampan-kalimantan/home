@@ -1,0 +1,486 @@
+@font-face{
+    font-family: 'NotoSerif-Bold';
+    src: url('assets/font-other/NotoSerif-Bold.ttf');
+}
+@font-face{
+    font-family: 'NotoSerif-BoldItalic';
+    src: url('assets/font-other/NotoSerif-BoldItalic.ttf');
+}
+@font-face{
+    font-family: 'NotoSerif-Italic';
+    src: url('assets/font-other/NotoSerif-Italic.ttf');
+}
+@font-face{
+    font-family: 'NotoSerif-Regular';
+    src: url('assets/font-other/NotoSerif-Regular.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Black';
+    src: url('assets/font-other/Roboto-Black.ttf');
+}
+@font-face{
+    font-family: 'Roboto-BlackItalic';
+    src: url('assets/font-other/Roboto-BlackItalic.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Bold';
+    src: url('assets/font-other/Roboto-Bold.ttf');
+}
+@font-face{
+    font-family: 'Roboto-BoldItalic';
+    src: url('assets/font-other/Roboto-BoldItalic.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Italic';
+    src: url('assets/font-other/Roboto-Italic.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Light';
+    src: url('assets/font-other/Roboto-Light.ttf');
+}
+@font-face{
+    font-family: 'Roboto-LightItalic';
+    src: url('assets/font-other/Roboto-LightItalic.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Medium';
+    src: url('assets/font-other/Roboto-Medium.ttf');
+}
+@font-face{
+    font-family: 'Roboto-MediumItalic';
+    src: url('assets/font-other/Roboto-MediumItalic.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url('assets/font-other/Roboto-Regular.ttf');
+}
+@font-face{
+    font-family: 'Roboto-Thin';
+    src: url('assets/font-other/Roboto-Thin.ttf');
+}
+@font-face{
+    font-family: 'Roboto-ThinItalic';
+    src: url('assets/font-other/Roboto-ThinItalic.ttf');
+}
+
+/* perangkat saya untuk debug UI */
+/* gunakan ini contoh : <body debug> */
+/* maka semua element yang di bawah akan memberikan line saat mouse hover atau click */
+[debug]   *:hover {
+	outline: 2px solid hsla(0,80%,50%,0.5);
+}
+
+
+
+
+/* agar smooth saat di scrolling via anchor */
+html {
+	scroll-behavior: smooth;
+}
+
+
+
+
+/* untuk mengatur typography */
+.bold { font-weight: 600; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline; }
+.normal { font-weight: 400; }
+.serif { font-family: serif; }
+
+.anchor-clean   a {
+	text-decoration: none;
+	color: hsl(0, 0%, 10%) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* for header section */
+.x-header {
+	background: url('assets/tiga.jpg') no-repeat center;
+	background-size: cover;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	color: white;
+	height: 980px;
+}
+
+
+.x-component-image {
+	width: 95px;
+	height: 95px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.border-primary {
+    border-color: #8c8c8c!important;
+}
+.border-circle {
+    border-color: #896B6B!important;
+}
+
+.a{
+color: #896B6B !important;
+}
+
+.col-lg-4{
+	padding-right: 5%;padding-left: 5%;
+}
+a:hover {
+    color: #896B6B;
+    text-decoration: none;
+}
+
+.text-primary{
+color: #896B6B !important;
+font-weight: bold;
+font-family: 'NotoSerif-Regular';
+}
+
+
+.navbar {
+	transition: background-color 0.15s ease-in-out;
+}
+.navbar-brand { font-size: 2em; }
+
+
+
+
+/* for all anchor */
+.nav   a {
+	color: #896B6B !important;
+	font-family: 'Roboto-Regular';
+}
+
+/* change bg-light */
+.bg-light {
+	background-color: #cccccc !important;
+}
+
+.kontak p{
+	font-family: 'Roboto-Regular';
+}
+
+.bg-primary {
+    background-color: white!important;
+}
+
+
+
+
+
+
+
+#page-galeri-row > *:hover {
+	opacity: 0.7;
+	transition: opacity 0.15s ease-in-out;
+}
+
+#page-aktivitas-row > *:hover {
+	padding: 0px !important;
+	transition: padding 0.15s ease-in-out;
+}
+
+#page-berita-dan-siaran-pers-row > *:hover {
+	opacity: 0.7;
+	transition: opacity 0.15s ease-in-out;
+}
+
+#page-publikasi-row > *:hover {
+	opacity: 0.7;
+	transition: opacity 0.15s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Simple Animations */
+.hover-muted > *:hover {
+	background-color: rgba(0,0,0,0.1);
+	transition: background-color 0.15s ease-in-out;
+}
+.hover-opacity > *:hover {
+	opacity: 0.7;
+	transition: opacity 0.15s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OVERRIDING KALENDER */
+	#calendar {
+		position: static !important;
+	}
+	@media (min-width: 992px) {
+		#calendar {
+			position: absolute !important;
+		}	
+	}
+
+
+	/* membuat headernya agar responsive terhadap layar */
+	.fc-header-toolbar {
+		display: block !important;
+	}
+	@media (min-width: 992px) {
+		.fc-header-toolbar {
+			display: flex !important;
+		}
+	}
+
+	/* membuat text menjadi berwarna hitam dan menghilangkan garis bawah */
+	.fc-view-harness   a {
+		color: black !important;
+		text-decoration: none !important;
+	}
+	.fc-view-harness   a:hover {
+		color: black !important;
+		text-decoration: none !important;
+	}
+
+	/* membuat text more agar berwarna biru */
+	.fc-view-harness   a.fc-daygrid-more-link {
+		/*color: steelBlue !important;*/
+		text-decoration: none !important;
+	}
+
+	/* membuat box hari ini agak lebih gelap */
+	.fc-view-harness   td.fc-day-today {
+		background-color: hsl(0,0%,90%) !important;
+	}
+
+
+
+
+
+
+[d] * { border: 1px solid hsla(0,50%,50%,0.2); }
+[dd] { border: 1px solid hsla(0,50%,50%,1); }
+
+
+
+
+
+body { color: black; }
+
+
+
+
+
+.__hide { display: none; }
+
+
+
+
+.__header {
+	padding-top: 100px !important;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.__header_icon {
+	position: absolute;
+	right:0; bottom:0;
+}
+.__header_icon>* {
+	margin: 0 10px;
+}
+
+
+
+/*.__line_index {
+	position: absolute;
+	top:1; bottom:1; right:0;
+}*/
+
+
+
+
+.__navbar_logo {
+	width: 125px;
+	transition: width 0.2s linear;
+}
+@media (max-width: 640px) {
+	.__navbar_logo {
+		width: 40px;
+	}	
+}
+
+
+
+
+
+#program .__icon {
+	align-items: center;
+	margin: auto;
+	width:130px;
+	height:130px;
+	border-width:4px !important;
+	background: white;
+}
+
+
+
+
+
+
+
+.__pelatihan .dropright>.dropdown-menu {
+	width: 135%;
+	height: 110%;
+	z-index: 100;
+	margin-top: -20px;
+	margin-left: 20px;
+	padding: 10px 15px;
+	overflow: auto;
+}
+
+
+.__pelatihan .__drop {
+	padding-left: 20px;
+	display: none;
+	position: absolute;
+	z-index: 9;
+	top:0; bottom:1;
+	width: 120%;
+	height: 105%;
+	overflow: auto;
+	margin-top: -20px;
+	margin-left: 100%;
+}
+.__pelatihan .__drop_inner {
+	padding: 10px;
+	background-color: white;
+	border: 1px solid darkgrey;
+}
+.__pelatihan .__drop img {
+	position: absolute;
+	top:40%; left:0; right:1; bottom:0;
+	margin-left: -18px;
+	width: 40px;
+	height: 30px;
+}
+
+@media (max-width: 640px) {
+	.__pelatihan .__drop {
+		background-color: rgba(0,0,0,0.2);
+		display: none;
+		position: fixed;
+		z-index: 9;
+		top:0; bottom:1; left:0; right:1;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		margin: 0;
+		padding: 25% 5% 5% 5%;
+	}
+	.__pelatihan .__drop>.__drop_inner {
+		border: 1px solid darkgrey;
+		background-color: white;
+		padding: 10px;
+		height: 100%;
+	}
+}
+/*.__pelatihan .__drop_toggle:hover~.__drop {
+	display: block;
+}*/
+
+
+
+
+
+.__pelatihan .carousel-item .col-3:hover {
+	border: 1px solid red;
+}
+.carousel-control-next,.carousel-control-prev {
+	margin: auto 0;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+.__liner {
+  display: flex;
+  flex-direction: row;
+}
+.__liner:before, .__liner:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid hsl(0,0%,70%);
+  margin: auto;
+}
+.__liner:before {
+  margin-right: 50px
+}
+.__liner:after {
+  margin-left: 50px
+}
+
+
+
+
+#modul .nav-tabs .nav-link {
+	margin-right: 5px;
+	color: black;
+	border: 1px solid hsl(50,99%,60%);
+}
+#modul .nav-tabs .nav-link.active {
+	color: black;
+	border: 1px solid hsl(50,99%,60%);
+	background-color: hsl(50,99%,60%);
+}
+
+.judul-program{
+	text-align: center;
+	padding-top: 10px; 
+	font-family: 'NotoSerif-Regular';
+}
+
+.des-program{
+	font-size: 13px;
+	font-family: 'Roboto-Regular';
+}
+
+.mitra{
+	text-align: center;
+	padding-top: 10px;
+	font-family: 'NotoSerif-Regular';
+}

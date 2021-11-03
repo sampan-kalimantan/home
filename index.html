@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- ( UPDATE ) -->
+		<!-- tambahkan meta tag seo disini -->
+		<meta charset="utf-8">
+
+		<!-- set responsive viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- load icons from font awesome -->
+		<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/all.min.css">
+
+		<!-- load bootstrap css -->
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+
+		<!-- ( UPDATE ) -->
+		<!-- install plugin calendar css & jsnya -->
+		<!-- karna efisiensi coding saya taruh di sini ya pak, -->
+		<!-- tetapi beberapa browser di hp rendah kesulitan merender script via head -->
+		<link rel="stylesheet" type="text/css" href="assets/fullcalendar-5.4.0/lib/main.min.css">
+
+		<!-- jika lebih memilih kenyamanan pengguna sebaiknya <scipt> ini di bawah saja setelah bootstrap -->
+		<script type="text/javascript" src="assets/fullcalendar-5.4.0/lib/main.min.js"></script>
+		<script type="text/javascript">
+			// initial plugin saat DOM konten ter load
+			document.addEventListener('DOMContentLoaded', function() {
+
+				// ambil id kalendernya
+				var calendarEl = document.getElementById('calendar');
+
+				// setup option untuk kalender
+				// foreach saja di antara option ini datanya jika memakai php
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					// konten toolbar
+					headerToolbar: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+					},
+					// nomor mingguan true dalam ISO
+					weekNumbers: true,
+					// format nomor mingguan
+					weekNumberCalculation: 'ISO',
+					// agar bisa mengclick nama hari/minggu untuk di lihat
+					navLinks: true,
+					// indicator sekarang
+					nowIndicator: true,
+					// agar bisa di edit via client side
+					editable: true,
+					// agar bisa di select
+					selectable: true,
+					// agar ada "more" saat event sudah lebih
+					dayMaxEvents: true,
+
+
+					// initialisasi events disini
+						// format tanggal adalah tahun-bulan-tanggal
+						// dan dalam ISO seperti ini pak. 
+						// @format : 	[tahun] - [bulan] - [tanggal] [T] [jam] : [menit] : [detik]
+						// @digit : 	4 digit - 2 digit - 2 digit - letter - 12 : 30 : 00
+						// @value : 	2020-05-05T12:30:00
+						// perhatikan jumlah digitnya pak saat di integrasikan dengan server.
+					
+					events: [
+						// contoh 2 agenda di hari yang sama
+						{
+							title: "upgrade OS ke Linux",
+							start: "2020-12-14",
+						},
+						{
+							title: "Membeli Keyboard LED",
+							start: "2020-12-14",
+						},
+						// contoh agenda dimulai tanggal 12 berakhir tanggal 18
+						{
+							title: "Install Ulang Web Environments",
+							start: "2020-12-16",
+							end: "2020-12-18"
+						},
+						// contoh agenda dengan jamnya
+						{
+							title: "Membeli Meja Komputer",
+							start: "2020-12-25T12:00:00",
+							end: "2020-12-25T14:00:00"
+						},
+					]
+				});
+				// initialize class jsnya
+				calendar.render();
+			});
+		</script>
+		
+		<!-- load theme untuk overriding -->
+		<link rel="stylesheet" type="text/css" href="theme.css">
+
+		<!-- title website -->
+		<title>Gakkum SDA</title>
+
+	</head>
+	<body>
+
+
+
+
+
+
+
+
+		<!-- ( UPDATE ) -->
+
+		<!-- perbaikan pada bagian ini, bisa melakukan copy paste atau memakai header ini. -->
+		<!-- header ini sudah saya perbaiki dan seharusnya meskipun di javascript -->
+		<!-- fitur header 100% fit dimatikan maka header ini akan tetap memiliki padding di sisi2nya -->
+		
+		<!-- header bagian atas -->
+		<div id="page-tentang-program" class="x-header jumbotron bg-dark d-flex position-relative">
+															<!-- letak bugnya disini pak, tepatnya di left -->
+			<span class="fa fa-info-circle :: d-inline-block position-absolute" style="top:90%; left:90%;"></span>
+			<div class="m-auto py-5">
+				<div class="col-lg-6">
+					<div class="container">
+						<h1 class="font-weight-normal">Taglinenya GAKKUM-SDA Ceatiundit, to ditasi nos dolo od quunto cum velecatis doluptassin.</h1>
+						<br>
+						<h3 class="d-inline-block pr-5 pb-2 border-bottom border-secondary">Tentang Program</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- ( UPDATE ) -->
+		
+		<!-- update bagian galeri tinggal di copy pastekan sesuai komen di bawah -->
+		<!-- saya rekomendasikan untuk mengahapus yang di sana dulu agar tidak salah copy. -->
+
+		<!-- galeri foto -->
+		<div id="page-galeri" class="bg-white py-5">
+			<div class="container-fluid">
+				<div class="row" debug>
+
+					<!-- galeri kiri untuk kalender -->
+					<div class="col-lg-6 overflow-auto">
+						<div class="position-relative">
+							<div id="calendar" class="w-100"></div>
+						</div>
+					</div>
+					
+					<!-- galeri kanan untuk slideshow -->
+					<div class="col-lg-6 p-0">
+						<div class="position-relative">
+							<!-- galeri slideshow -->
+							<div id="carousel-first" class="bg-muted carousel slide" data-ride="carousel">
+								<!-- indicator di bawah -->
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-first" data-slide-to="0" class="active"></li>
+									<li data-target="#carousel-first" data-slide-to="1"></li>
+									<!-- setelah menambah konten tambahkan nomor sesuai urutan di <li> -->
+								</ol>
+								<!-- slideshow box item -->
+								<div class="carousel-inner :: hover-opacity" style="z-index:1">
+									<!-- slide 0 -->
+									<a href="#slide0" class="carousel-item active">
+										<img src="assets/silas-baisch-PvBECXDZw84-unsplash-header.jpg" class="d-block w-100">
+										<div class="carousel-caption pb-5" style="left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5)">
+											<h5>heading Caption</h5>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</a>
+									<!-- slide 1 -->
+									<a href="#slide1" class="carousel-item">
+										<img src="assets/silas-baisch-PvBECXDZw84-unsplash-header.jpg" class="d-block w-100">
+										<div class="carousel-caption pb-5" style="left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5)">
+											<h5>heading Caption</h5>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</a>
+									<!-- tambahkan konten slideshow copy div .carousel-item -->
+								</div>
+								<!-- slideshow tombol kiri -->
+								<a class="carousel-control-prev" href="#carousel-first" data-slide="prev" role="button">
+									<span class="carousel-control-prev-icon"></span>
+								</a>
+								<!-- slideshow tombol kanan -->
+								<a class="carousel-control-next" href="#carousel-first" data-slide="next" role="button">
+									<span class="carousel-control-next-icon"></span>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		
+		<!-- load fontawesome for icons, maybe use this -->
+		<script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
+
+		<!-- load jquery -->
+		<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+		
+		<!-- load bootstrap bundle -->
+		<script type="text/javascript" src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- load operation untuk overriding -->
+		<script type="text/javascript" src="operation.js"></script>
+
+	</body>
+</html>
